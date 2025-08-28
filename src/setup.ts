@@ -270,7 +270,7 @@ export function generateMCPCommand(
     : absoluteConfigPath;
 
   // Server name, then command, then options
-  return `claude mcp add cclsp ${commandPrefix}npx cclsp@latest${scopeFlag} --env CCLSP_CONFIG_PATH=${quotedPath}`;
+  return `claude mcp add cclsp ${commandPrefix}npx github:sysid/cclsp${scopeFlag} --env CCLSP_CONFIG_PATH=${quotedPath}`;
 }
 
 export function buildMCPArgs(
@@ -286,9 +286,9 @@ export function buildMCPArgs(
 
   // Add the full command and its arguments
   if (isWindows) {
-    mcpArgs.push('cmd', '/c', 'npx', 'cclsp@latest');
+    mcpArgs.push('cmd', '/c', 'npx', 'github:sysid/cclsp');
   } else {
-    mcpArgs.push('npx', 'cclsp@latest');
+    mcpArgs.push('npx', 'github:sysid/cclsp');
   }
 
   // Add options after the command

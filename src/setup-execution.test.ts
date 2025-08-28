@@ -46,7 +46,7 @@ describe('Setup command execution tests', () => {
     // Verify command structure
     expect(command).toContain('claude mcp add cclsp');
     expect(command).toContain('--env CCLSP_CONFIG_PATH=');
-    expect(command).toContain('npx cclsp@latest');
+    expect(command).toContain('npx github:sysid/cclsp');
 
     // Verify args structure
     expect(args[0]).toBe('mcp');
@@ -156,7 +156,7 @@ describe('Setup command execution tests', () => {
           console.log(`Command would be: ${command}`);
           expect(command).toContain('claude mcp add cclsp');
           expect(command).toContain('--env CCLSP_CONFIG_PATH=');
-          expect(command).toContain('npx cclsp@latest');
+          expect(command).toContain('npx github:sysid/cclsp');
         }
       } finally {
         // Cleanup

@@ -282,9 +282,9 @@ describe('Path execution tests', () => {
       // Verify the structure is valid
       expect(command).toContain('claude mcp add cclsp');
       if (isWindows) {
-        expect(command).toContain('cmd /c npx cclsp@latest');
+        expect(command).toContain('cmd /c npx github:sysid/cclsp');
       } else {
-        expect(command).toContain('npx cclsp@latest');
+        expect(command).toContain('npx github:sysid/cclsp');
       }
       expect(command).toContain('CCLSP_CONFIG_PATH=');
       expect(args).toContain('mcp');
@@ -302,10 +302,10 @@ describe('Path execution tests', () => {
 
     // Command should be properly formatted based on platform
     if (isWindows) {
-      expect(command).toContain('claude mcp add cclsp cmd /c npx cclsp@latest');
+      expect(command).toContain('claude mcp add cclsp cmd /c npx github:sysid/cclsp');
       expect(command).toContain('--env CCLSP_CONFIG_PATH=');
     } else {
-      expect(command).toContain('claude mcp add cclsp npx cclsp@latest');
+      expect(command).toContain('claude mcp add cclsp npx github:sysid/cclsp');
       expect(command).toContain('--env CCLSP_CONFIG_PATH=');
     }
 
@@ -370,7 +370,7 @@ describe('Path execution tests', () => {
 
     // Verify command structure
     expect(macCommand).toContain('claude mcp add cclsp');
-    expect(macCommand).toContain('npx cclsp@latest');
+    expect(macCommand).toContain('npx github:sysid/cclsp');
     expect(macArgs).toEqual(expect.arrayContaining(['mcp', 'add', 'cclsp']));
   });
 });
@@ -382,7 +382,7 @@ describe('Windows platform support', () => {
 
     // Test Windows platform
     const windowsCommand = generateMCPCommand(configPath, isUser, 'win32');
-    expect(windowsCommand).toContain('cmd /c npx cclsp@latest');
+    expect(windowsCommand).toContain('cmd /c npx github:sysid/cclsp');
     expect(windowsCommand).toContain('CCLSP_CONFIG_PATH=');
     expect(windowsCommand).not.toContain('--scope user');
   });
@@ -394,13 +394,13 @@ describe('Windows platform support', () => {
     // Test macOS platform
     const macCommand = generateMCPCommand(configPath, isUser, 'darwin');
     expect(macCommand).not.toContain('cmd /c');
-    expect(macCommand).toContain('npx cclsp@latest');
+    expect(macCommand).toContain('npx github:sysid/cclsp');
     expect(macCommand).toContain('CCLSP_CONFIG_PATH=');
 
     // Test Linux platform
     const linuxCommand = generateMCPCommand(configPath, isUser, 'linux');
     expect(linuxCommand).not.toContain('cmd /c');
-    expect(linuxCommand).toContain('npx cclsp@latest');
+    expect(linuxCommand).toContain('npx github:sysid/cclsp');
   });
 
   test('should add --scope user flag when isUser is true', () => {
@@ -409,7 +409,7 @@ describe('Windows platform support', () => {
     // Test with user scope on Windows
     const windowsUserCommand = generateMCPCommand(configPath, true, 'win32');
     expect(windowsUserCommand).toContain('--scope user');
-    expect(windowsUserCommand).toContain('cmd /c npx cclsp@latest');
+    expect(windowsUserCommand).toContain('cmd /c npx github:sysid/cclsp');
 
     // Test with user scope on macOS
     const macUserCommand = generateMCPCommand(configPath, true, 'darwin');
@@ -430,7 +430,7 @@ describe('Windows platform support', () => {
       'cmd',
       '/c',
       'npx',
-      'cclsp@latest',
+      'github:sysid/cclsp',
       '--env',
       `CCLSP_CONFIG_PATH=${absoluteConfigPath}`,
     ]);
@@ -447,7 +447,7 @@ describe('Windows platform support', () => {
       'add',
       'cclsp',
       'npx',
-      'cclsp@latest',
+      'github:sysid/cclsp',
       '--env',
       `CCLSP_CONFIG_PATH=${absoluteConfigPath}`,
     ]);
@@ -459,7 +459,7 @@ describe('Windows platform support', () => {
       'add',
       'cclsp',
       'npx',
-      'cclsp@latest',
+      'github:sysid/cclsp',
       '--env',
       `CCLSP_CONFIG_PATH=${absoluteConfigPath}`,
     ]);
@@ -477,7 +477,7 @@ describe('Windows platform support', () => {
       'cmd',
       '/c',
       'npx',
-      'cclsp@latest',
+      'github:sysid/cclsp',
       '--scope',
       'user',
       '--env',
@@ -491,7 +491,7 @@ describe('Windows platform support', () => {
       'add',
       'cclsp',
       'npx',
-      'cclsp@latest',
+      'github:sysid/cclsp',
       '--scope',
       'user',
       '--env',

@@ -164,6 +164,6 @@ Contributors will be recognized in the following ways:
 
 ## Questions?
 
-Feel free to open an issue with the `question` label or start a discussion in [GitHub Discussions](https://github.com/ktnyt/cclsp/discussions).
+Feel free to open an issue with the `question` label or start a discussion in [GitHub Discussions](https://github.com/sysid/cclsp/discussions).
 
 Thank you for contributing! 🎉

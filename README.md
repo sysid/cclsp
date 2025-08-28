@@ -80,10 +80,10 @@ Run the interactive setup wizard:
 
 ```bash
 # One-time setup (no installation required)
-npx cclsp@latest setup
+npx github:sysid/cclsp setup
 
 # For user-wide configuration
-npx cclsp@latest setup --user
+npx github:sysid/cclsp setup --user
 ```
 
 The setup wizard will:
@@ -123,7 +123,7 @@ If you prefer manual configuration:
 
 4. **Add to Claude MCP**:
    ```bash
-   claude mcp add cclsp npx cclsp@latest --env CCLSP_CONFIG_PATH=/path/to/cclsp.json
+   claude mcp add cclsp npx github:sysid/cclsp --env CCLSP_CONFIG_PATH=/path/to/cclsp.json
    ```
 
 ### Language Server Installation
@@ -183,7 +183,7 @@ gem install solargraph
 npm install -g intelephense
 ```
 
-For more languages and detailed instructions, run `npx cclsp@latest setup` and select "Show detailed installation guides".
+For more languages and detailed instructions, run `npx github:sysid/cclsp setup` and select "Show detailed installation guides".
 
 </details>
 
@@ -232,7 +232,7 @@ For easy setup, use the interactive configuration generator:
 
 ```bash
 # Using npx (recommended for one-time setup)
-npx cclsp@latest setup
+npx github:sysid/cclsp setup
 
 # If installed globally
 cclsp setup
