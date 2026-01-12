@@ -1,5 +1,9 @@
 [![MseeP.ai Security Assessment Badge](https://mseep.net/pr/ktnyt-cclsp-badge.png)](https://mseep.ai/app/ktnyt-cclsp)
 
+```bash
+claude mcp add cclsp npx /Users/Q187392/dev/s/forked/cclsp --scope user --env CCLSP_CONFIG_PATH=/Users/Q187392/.config/claude/cclsp.json
+```
+
 # cclsp - not your average LSP adapter
 
 [![npm version](https://badge.fury.io/js/cclsp.svg)](https://www.npmjs.com/package/cclsp)
